@@ -1,164 +1,228 @@
 export default function Home() {
   return (
-    <main style={{ fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif" }}>
-      <div style={{ maxWidth: 980, margin: "0 auto", padding: "56px 20px" }}>
-        <header style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12 }}>
-          <div style={{ fontWeight: 700, letterSpacing: 0.2 }}>The Calm VA</div>
-          <nav style={{ display: "flex", gap: 16, fontSize: 14 }}>
-            <a href="#services">Services</a>
-            <a href="#process">Process</a>
-            <a href="#packages">Packages</a>
-            <a href="#contact">Contact</a>
+    <main className="min-h-screen bg-[#fbf7f0] text-[#1f1f1f]">
+      {/* Subtle background glow */}
+      <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(1000px_600px_at_20%_10%,rgba(190,160,120,0.18),transparent_60%),radial-gradient(900px_500px_at_80%_20%,rgba(220,200,170,0.16),transparent_55%)]" />
+
+      <div className="mx-auto max-w-5xl px-5 py-12">
+        {/* Header */}
+        <header className="flex items-center justify-between gap-4">
+          <div className="rounded-full border border-black/10 bg-white/70 px-4 py-2 shadow-sm backdrop-blur">
+            <span className="brand-reveal text-xs font-semibold uppercase tracking-[0.12em] text-black/80">
+              THE CALM VA
+            </span>
+          </div>
+
+          <nav className="hidden items-center gap-6 text-sm md:flex">
+            <a className="opacity-80 hover:opacity-100" href="#services">
+              Services
+            </a>
+            <a className="opacity-80 hover:opacity-100" href="#process">
+              Process
+            </a>
+            <a className="opacity-80 hover:opacity-100" href="#packages">
+              Packages
+            </a>
+            <a className="opacity-80 hover:opacity-100" href="#contact">
+              Contact
+            </a>
           </nav>
         </header>
 
-        <section style={{ padding: "64px 0 40px" }}>
-          <p style={{ margin: 0, fontSize: 13, letterSpacing: 1, opacity: 0.75 }}>
+        {/* Hero */}
+        <section className="mt-12 rounded-3xl border border-black/10 bg-white/70 p-8 shadow-sm backdrop-blur md:p-12 animate-fadeUp">
+          <p className="text-xs font-semibold tracking-[0.25em] text-black/60">
             VIRTUAL ASSISTANCE • CONTENT SUPPORT • RESEARCH
           </p>
-          <h1 style={{ margin: "14px 0 10px", fontSize: 44, lineHeight: 1.1 }}>
+
+          <h1 className="mt-4 text-4xl font-semibold leading-tight tracking-tight md:text-5xl">
             Calm systems for growing coaches & consultants.
           </h1>
-          <p style={{ margin: "0 0 22px", fontSize: 18, lineHeight: 1.5, maxWidth: 720, opacity: 0.85 }}>
-            I help you reclaim time by organizing admin, supporting content, and handling research—so you can focus on clients and growth.
+
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-black/75 md:text-lg">
+            I help you reclaim time by organizing admin, supporting content, and handling research—so you can focus on clients
+            and growth.
           </p>
 
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+          {/* Primary actions */}
+          <div className="mt-7 flex flex-wrap gap-3">
             <a
-              href="#contact"
-              style={{
-                display: "inline-block",
-                padding: "12px 16px",
-                borderRadius: 10,
-                border: "1px solid #111",
-                textDecoration: "none",
-                fontWeight: 600
-              }}
+              href="https://calendly.com/sheilahkemboi44/30min"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center rounded-xl bg-[#1f1f1f] px-5 py-3 text-sm font-semibold text-white shadow-sm transition-transform hover:-translate-y-[1px] hover:shadow-md"
             >
-              Work with me
+              Book a 30-min Discovery Call
             </a>
+
+            <a
+              href="mailto:thecalmva@gmail.com"
+              className="inline-flex items-center justify-center rounded-xl border border-black/10 bg-white px-5 py-3 text-sm font-semibold text-[#1f1f1f] shadow-sm transition-transform hover:-translate-y-[1px] hover:shadow-md"
+            >
+              Email Me
+            </a>
+
             <a
               href="#services"
-              style={{
-                display: "inline-block",
-                padding: "12px 16px",
-                borderRadius: 10,
-                border: "1px solid #ddd",
-                textDecoration: "none",
-                fontWeight: 600
-              }}
+              className="inline-flex items-center justify-center rounded-xl border border-black/10 bg-white/60 px-5 py-3 text-sm font-semibold text-[#1f1f1f] transition-transform hover:-translate-y-[1px]"
             >
-              See services
+              View Services
             </a>
           </div>
-        </section>
 
-        <section style={{ padding: "18px 0 46px", opacity: 0.9 }}>
-          <div
-            style={{
-              border: "1px solid #eee",
-              borderRadius: 14,
-              padding: 16,
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-              gap: 12
-            }}
-          >
-            <div>
-              <div style={{ fontWeight: 700 }}>Reliable support</div>
-              <div style={{ fontSize: 14, opacity: 0.85 }}>Clear communication + structured execution.</div>
+          {/* Trust strip */}
+          <div className="mt-10 grid gap-3 md:grid-cols-3">
+            <div className="rounded-2xl border border-black/10 bg-white p-5 shadow-sm transition-transform hover:-translate-y-[1px] hover:shadow-md">
+              <div className="text-sm font-semibold">Reliable support</div>
+              <div className="mt-1 text-sm text-black/70">Clear communication + structured execution.</div>
             </div>
-            <div>
-              <div style={{ fontWeight: 700 }}>Systems-first</div>
-              <div style={{ fontSize: 14, opacity: 0.85 }}>Less chaos, more consistency.</div>
+            <div className="rounded-2xl border border-black/10 bg-white p-5 shadow-sm transition-transform hover:-translate-y-[1px] hover:shadow-md">
+              <div className="text-sm font-semibold">Systems-first</div>
+              <div className="mt-1 text-sm text-black/70">Less chaos, more consistency.</div>
             </div>
-            <div>
-              <div style={{ fontWeight: 700 }}>Professional & calm</div>
-              <div style={{ fontSize: 14, opacity: 0.85 }}>A brand built on trust, not noise.</div>
+            <div className="rounded-2xl border border-black/10 bg-white p-5 shadow-sm transition-transform hover:-translate-y-[1px] hover:shadow-md">
+              <div className="text-sm font-semibold">Calm authority</div>
+              <div className="mt-1 text-sm text-black/70">Professional, faceless, and results-focused.</div>
             </div>
           </div>
         </section>
 
-        <section id="services" style={{ padding: "18px 0 56px" }}>
-          <h2 style={{ margin: "0 0 10px", fontSize: 28 }}>Services</h2>
-          <p style={{ margin: "0 0 18px", opacity: 0.85, maxWidth: 720 }}>
-            Choose one area or combine them for full support.
+        {/* Services */}
+        <section id="services" className="mt-12 animate-fadeUp2">
+          <h2 className="text-2xl font-semibold tracking-tight">Services</h2>
+          <p className="mt-2 max-w-2xl text-black/70">Choose one area or combine them for full support.</p>
+
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            <Card
+              title="Admin Support"
+              items={["Inbox support", "Calendar coordination", "Document organization", "Client follow-ups"]}
+            />
+            <Card
+              title="Content Support"
+              items={["Caption drafts", "Content planning", "Repurposing ideas", "Posting support (optional)"]}
+            />
+            <Card
+              title="Research & Organization"
+              items={["Competitor research", "Audience insights", "Topic research", "Systems + process drafting"]}
+            />
+          </div>
+        </section>
+
+        {/* Process */}
+        <section id="process" className="mt-12 animate-fadeUp3">
+          <h2 className="text-2xl font-semibold tracking-tight">How it works</h2>
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            <Step title="1) 30-minute discovery call" text="We clarify your goals, tools, and priorities." />
+            <Step title="2) Set up calm systems" text="I organize workflows so tasks move smoothly." />
+            <Step title="3) Weekly execution + updates" text="You get consistent support and a simple update." />
+          </div>
+        </section>
+
+        {/* Packages (no prices) */}
+        <section id="packages" className="mt-12 animate-fadeUp4">
+          <h2 className="text-2xl font-semibold tracking-tight">Packages</h2>
+          <p className="mt-2 max-w-2xl text-black/70">
+            No fixed pricing yet. I share a rate card after understanding your workload and goals.
           </p>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 14 }}>
-            {[
-              { title: "Admin Support", bullets: ["Inbox support", "Calendar coordination", "Document organization", "Client follow-ups"] },
-              { title: "Content Support", bullets: ["Caption drafts", "Content planning", "Repurposing ideas", "Posting support (optional)"] },
-              { title: "Research & Organization", bullets: ["Competitor research", "Audience insights", "Topic research", "Systems + SOP drafting"] }
-            ].map((card) => (
-              <div key={card.title} style={{ border: "1px solid #eee", borderRadius: 14, padding: 16 }}>
-                <div style={{ fontWeight: 800, marginBottom: 10 }}>{card.title}</div>
-                <ul style={{ margin: 0, paddingLeft: 18, opacity: 0.9 }}>
-                  {card.bullets.map((b) => (
-                    <li key={b} style={{ marginBottom: 6, fontSize: 14 }}>{b}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            <Package
+              name="Starter Support"
+              desc="Light admin + organization to free up time."
+            />
+            <Package
+              name="Growth Support"
+              desc="Admin + content support for consistency."
+            />
+            <Package
+              name="Full Support"
+              desc="Admin + content + research + systems building."
+            />
           </div>
         </section>
 
-        <section id="process" style={{ padding: "18px 0 56px" }}>
-          <h2 style={{ margin: "0 0 10px", fontSize: 28 }}>How it works</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 14 }}>
-            {[
-              { step: "1) Quick call", text: "We clarify your goals, tools, and priorities." },
-              { step: "2) Set up systems", text: "I organize workflows so tasks move smoothly." },
-              { step: "3) Weekly execution", text: "You get consistent support and a simple update." }
-            ].map((x) => (
-              <div key={x.step} style={{ border: "1px solid #eee", borderRadius: 14, padding: 16 }}>
-                <div style={{ fontWeight: 800 }}>{x.step}</div>
-                <p style={{ margin: "8px 0 0", opacity: 0.85 }}>{x.text}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section id="packages" style={{ padding: "18px 0 56px" }}>
-          <h2 style={{ margin: "0 0 10px", fontSize: 28 }}>Packages</h2>
-          <p style={{ margin: "0 0 18px", opacity: 0.85 }}>
-            Start simple. Scale when you’re ready. (We can add pricing later.)
+        {/* Contact */}
+        <section id="contact" className="mt-12 animate-fadeUp5">
+          <h2 className="text-2xl font-semibold tracking-tight">Contact</h2>
+          <p className="mt-2 max-w-2xl text-black/70">
+            Prefer booking? Use Calendly. Prefer email? Send your request and I’ll reply with next steps.
           </p>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 14 }}>
-            {[
-              { name: "Starter Support", desc: "Light admin + organization to free up time." },
-              { name: "Growth Support", desc: "Admin + content support for consistency." },
-              { name: "Full Support", desc: "Admin + content + research + systems building." }
-            ].map((p) => (
-              <div key={p.name} style={{ border: "1px solid #111", borderRadius: 14, padding: 16 }}>
-                <div style={{ fontWeight: 900 }}>{p.name}</div>
-                <p style={{ margin: "8px 0 0", opacity: 0.9 }}>{p.desc}</p>
-              </div>
-            ))}
+          <div className="mt-6 grid gap-4 md:grid-cols-2">
+            <div className="rounded-3xl border border-black/10 bg-white p-6 shadow-sm transition-transform hover:-translate-y-[1px] hover:shadow-md">
+              <div className="text-sm font-semibold text-black/80">Book a discovery call</div>
+              <p className="mt-2 text-sm text-black/70">
+                A 30-minute call to understand your needs and recommend the best support plan.
+              </p>
+              <a
+                href="https://calendly.com/sheilahkemboi44/30min"
+                target="_blank"
+                rel="noreferrer"
+                className="mt-4 inline-flex items-center justify-center rounded-xl bg-[#1f1f1f] px-5 py-3 text-sm font-semibold text-white shadow-sm transition-transform hover:-translate-y-[1px] hover:shadow-md"
+              >
+                Open Calendly
+              </a>
+            </div>
+
+            <div className="rounded-3xl border border-black/10 bg-white p-6 shadow-sm transition-transform hover:-translate-y-[1px] hover:shadow-md">
+              <div className="text-sm font-semibold text-black/80">Email</div>
+              <p className="mt-2 text-sm text-black/70">
+                Send what you need help with. I’ll reply with availability and a rate card.
+              </p>
+              <a
+                className="mt-3 inline-block text-base font-semibold text-[#1f1f1f] underline decoration-black/20 underline-offset-4 hover:decoration-black/60"
+                href="mailto:thecalmva@gmail.com"
+              >
+                thecalmva@gmail.com
+              </a>
+            </div>
           </div>
         </section>
 
-        <section id="contact" style={{ padding: "18px 0 56px" }}>
-          <h2 style={{ margin: "0 0 10px", fontSize: 28 }}>Contact</h2>
-          <p style={{ margin: "0 0 18px", opacity: 0.85, maxWidth: 720 }}>
-            Email me with what you need help with, and I’ll reply with next steps.
-          </p>
-
-          <div style={{ border: "1px solid #eee", borderRadius: 14, padding: 16 }}>
-            <p style={{ margin: 0, opacity: 0.9 }}>
-              Email: <a href="thecalmva@gmail.com">youremail@example.com</a>
-            </p>
-            <p style={{ margin: "10px 0 0", fontSize: 14, opacity: 0.8 }}>
-              Replace this email with yours. We can add a form or booking link later.
-            </p>
-          </div>
-        </section>
-
-        <footer style={{ paddingTop: 16, borderTop: "1px solid #eee", fontSize: 13, opacity: 0.75 }}>
-          © {new Date().getFullYear()} The Calm VA • Built on Vercel
+        <footer className="mt-12 border-t border-black/10 py-8 text-sm text-black/60">
+          © {new Date().getFullYear()} THE CALM VA • Built on Vercel
         </footer>
       </div>
     </main>
+  );
+}
+
+function Card({ title, items }: { title: string; items: string[] }) {
+  return (
+    <div className="rounded-3xl border border-black/10 bg-white p-6 shadow-sm transition-transform hover:-translate-y-[1px] hover:shadow-md">
+      <div className="text-sm font-semibold">{title}</div>
+      <ul className="mt-3 space-y-2 text-sm text-black/70">
+        {items.map((x) => (
+          <li key={x} className="flex gap-2">
+            <span className="mt-[6px] inline-block h-1.5 w-1.5 rounded-full bg-black/30" />
+            <span>{x}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function Step({ title, text }: { title: string; text: string }) {
+  return (
+    <div className="rounded-3xl border border-black/10 bg-white p-6 shadow-sm transition-transform hover:-translate-y-[1px] hover:shadow-md">
+      <div className="text-sm font-semibold">{title}</div>
+      <p className="mt-2 text-sm text-black/70">{text}</p>
+    </div>
+  );
+}
+
+function Package({ name, desc }: { name: string; desc: string }) {
+  return (
+    <div className="rounded-3xl border border-black/20 bg-white p-6 shadow-sm transition-transform hover:-translate-y-[1px] hover:shadow-md">
+      <div className="text-sm font-semibold">{name}</div>
+      <p className="mt-2 text-sm text-black/70">{desc}</p>
+      <div className="mt-4 text-xs font-semibold tracking-wide text-black/50">
+        Request a rate card via{" "}
+        <a className="underline underline-offset-4" href="mailto:thecalmva@gmail.com">
+          email
+        </a>
+      </div>
+    </div>
   );
 }

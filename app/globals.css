@@ -24,3 +24,20 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeUp { animation: fadeUp 600ms ease-out both; }
+.animate-fadeUp2 { animation: fadeUp 650ms ease-out both; }
+.animate-fadeUp3 { animation: fadeUp 700ms ease-out both; }
+.animate-fadeUp4 { animation: fadeUp 750ms ease-out both; }
+.animate-fadeUp5 { animation: fadeUp 800ms ease-out both; }
+@keyframes brandReveal {
+  0% { opacity: 0; transform: translateY(8px); letter-spacing: 0.25em; }
+  100% { opacity: 1; transform: translateY(0); letter-spacing: 0.12em; }
+}
+
+.brand-reveal { animation: brandReveal 700ms ease-out both; }
+
