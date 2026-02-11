@@ -4,6 +4,18 @@ export default function Home() {
       {/* Subtle background glow */}
       <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(1000px_600px_at_20%_10%,rgba(190,160,120,0.18),transparent_60%),radial-gradient(900px_500px_at_80%_20%,rgba(220,200,170,0.16),transparent_55%)]" />
 
+      {/* Sticky CTA */}
+      <div className="fixed bottom-5 right-5 z-50">
+        <a
+          href="https://calendly.com/sheilahkemboi44/30min"
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center justify-center rounded-full bg-[#1f1f1f] px-5 py-3 text-sm font-semibold text-white shadow-lg transition-transform hover:-translate-y-[1px] hover:shadow-xl"
+        >
+          Book a Call
+        </a>
+      </div>
+
       <div className="mx-auto max-w-5xl px-5 py-12">
         {/* Header */}
         <header className="flex items-center justify-between gap-4">
@@ -20,8 +32,17 @@ export default function Home() {
             <a className="opacity-80 hover:opacity-100" href="#process">
               Process
             </a>
+            <a className="opacity-80 hover:opacity-100" href="#support">
+              Support
+            </a>
+            <a className="opacity-80 hover:opacity-100" href="#outcomes">
+              Outcomes
+            </a>
             <a className="opacity-80 hover:opacity-100" href="#packages">
               Packages
+            </a>
+            <a className="opacity-80 hover:opacity-100" href="#faq">
+              FAQ
             </a>
             <a className="opacity-80 hover:opacity-100" href="#contact">
               Contact
@@ -56,7 +77,7 @@ export default function Home() {
             </a>
 
             <a
-              href="mailto:thecalmva@gmail.com"
+              href="mailto:thecalmva6@gmail.com"
               className="inline-flex items-center justify-center rounded-xl border border-black/10 bg-white px-5 py-3 text-sm font-semibold text-[#1f1f1f] shadow-sm transition-transform hover:-translate-y-[1px] hover:shadow-md"
             >
               Email Me
@@ -72,18 +93,9 @@ export default function Home() {
 
           {/* Trust strip */}
           <div className="mt-10 grid gap-3 md:grid-cols-3">
-            <div className="rounded-2xl border border-black/10 bg-white p-5 shadow-sm transition-transform hover:-translate-y-[1px] hover:shadow-md">
-              <div className="text-sm font-semibold">Reliable support</div>
-              <div className="mt-1 text-sm text-black/70">Clear communication + structured execution.</div>
-            </div>
-            <div className="rounded-2xl border border-black/10 bg-white p-5 shadow-sm transition-transform hover:-translate-y-[1px] hover:shadow-md">
-              <div className="text-sm font-semibold">Systems-first</div>
-              <div className="mt-1 text-sm text-black/70">Less chaos, more consistency.</div>
-            </div>
-            <div className="rounded-2xl border border-black/10 bg-white p-5 shadow-sm transition-transform hover:-translate-y-[1px] hover:shadow-md">
-              <div className="text-sm font-semibold">Calm authority</div>
-              <div className="mt-1 text-sm text-black/70">Professional, faceless, and results-focused.</div>
-            </div>
+            <MiniCard title="Reliable support" text="Clear communication + structured execution." />
+            <MiniCard title="Systems-first" text="Less chaos, more consistency." />
+            <MiniCard title="Calm authority" text="Professional, faceless, and results-focused." />
           </div>
         </section>
 
@@ -118,31 +130,80 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Support */}
+        <section id="support" className="mt-12 animate-fadeUp4">
+          <h2 className="text-2xl font-semibold tracking-tight">How I support you</h2>
+          <p className="mt-2 max-w-2xl text-black/70">Simple, clear, and consistent support that fits your workflow.</p>
+
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            <MiniCard
+              title="Tools you already use"
+              text="Google Workspace, Notion, Trello, Asana, Slack, and email. I adapt to your setup."
+            />
+            <MiniCard
+              title="Weekly updates"
+              text="You get a clear weekly summary of completed tasks, next steps, and priorities."
+            />
+            <MiniCard
+              title="Response time"
+              text="You can expect professional communication and timely responses during working hours."
+            />
+          </div>
+        </section>
+
+        {/* Outcomes */}
+        <section id="outcomes" className="mt-12 animate-fadeUp5">
+          <h2 className="text-2xl font-semibold tracking-tight">What this support can look like</h2>
+          <p className="mt-2 max-w-2xl text-black/70">
+            Examples of outcomes I can help you work toward. Your results depend on your business and scope.
+          </p>
+
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            <MiniCard title="Inbox under control" text="Clear categories, follow-up flow, and weekly zero-inbox targets." />
+            <MiniCard title="Content consistency" text="A simple content plan plus caption drafts so you post without stress." />
+            <MiniCard title="Organized operations" text="Clean docs, repeatable workflows, and simple process guides." />
+          </div>
+        </section>
+
         {/* Packages (no prices) */}
-        <section id="packages" className="mt-12 animate-fadeUp4">
+        <section id="packages" className="mt-12">
           <h2 className="text-2xl font-semibold tracking-tight">Packages</h2>
           <p className="mt-2 max-w-2xl text-black/70">
             No fixed pricing yet. I share a rate card after understanding your workload and goals.
           </p>
 
           <div className="mt-6 grid gap-4 md:grid-cols-3">
-            <Package
-              name="Starter Support"
-              desc="Light admin + organization to free up time."
+            <Package name="Starter Support" desc="Light admin + organization to free up time." />
+            <Package name="Growth Support" desc="Admin + content support for consistency." />
+            <Package name="Full Support" desc="Admin + content + research + systems building." />
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section id="faq" className="mt-12">
+          <h2 className="text-2xl font-semibold tracking-tight">FAQ</h2>
+          <div className="mt-6 grid gap-4">
+            <FAQ
+              q="What happens on the 30-minute discovery call?"
+              a="We discuss what you need help with, what tools you use, your timelines, and the best support approach. If it’s a fit, I share next steps and a rate card."
             />
-            <Package
-              name="Growth Support"
-              desc="Admin + content support for consistency."
+            <FAQ
+              q="What tools do you work with?"
+              a="I can work in Google Workspace, Notion, Trello, Asana, Slack, and other common tools. If you already have a system, I align to it."
             />
-            <Package
-              name="Full Support"
-              desc="Admin + content + research + systems building."
+            <FAQ
+              q="How do we communicate and track work?"
+              a="We can use email, Slack, or WhatsApp plus a simple task board. You’ll also receive a weekly summary so you always know what is done and what is next."
+            />
+            <FAQ
+              q="What tasks do you not do?"
+              a="I do not provide legal advice, financial advice, or handle tasks that require licensed professional services. If you are unsure, ask and I will clarify."
             />
           </div>
         </section>
 
         {/* Contact */}
-        <section id="contact" className="mt-12 animate-fadeUp5">
+        <section id="contact" className="mt-12">
           <h2 className="text-2xl font-semibold tracking-tight">Contact</h2>
           <p className="mt-2 max-w-2xl text-black/70">
             Prefer booking? Use Calendly. Prefer email? Send your request and I’ll reply with next steps.
@@ -171,9 +232,9 @@ export default function Home() {
               </p>
               <a
                 className="mt-3 inline-block text-base font-semibold text-[#1f1f1f] underline decoration-black/20 underline-offset-4 hover:decoration-black/60"
-                href="mailto:thecalmva@gmail.com"
+                href="mailto:thecalmva6@gmail.com"
               >
-                thecalmva@gmail.com
+                thecalmva6@gmail.com
               </a>
             </div>
           </div>
@@ -184,6 +245,15 @@ export default function Home() {
         </footer>
       </div>
     </main>
+  );
+}
+
+function MiniCard({ title, text }: { title: string; text: string }) {
+  return (
+    <div className="rounded-2xl border border-black/10 bg-white p-5 shadow-sm transition-transform hover:-translate-y-[1px] hover:shadow-md">
+      <div className="text-sm font-semibold">{title}</div>
+      <div className="mt-1 text-sm text-black/70">{text}</div>
+    </div>
   );
 }
 
@@ -219,10 +289,22 @@ function Package({ name, desc }: { name: string; desc: string }) {
       <p className="mt-2 text-sm text-black/70">{desc}</p>
       <div className="mt-4 text-xs font-semibold tracking-wide text-black/50">
         Request a rate card via{" "}
-        <a className="underline underline-offset-4" href="mailto:thecalmva@gmail.com">
+        <a className="underline underline-offset-4" href="mailto:thecalmva6@gmail.com">
           email
         </a>
       </div>
     </div>
+  );
+}
+
+function FAQ({ q, a }: { q: string; a: string }) {
+  return (
+    <details className="group rounded-3xl border border-black/10 bg-white p-6 shadow-sm">
+      <summary className="cursor-pointer list-none text-sm font-semibold">
+        {q}
+        <span className="float-right text-black/50 transition-transform group-open:rotate-45">+</span>
+      </summary>
+      <p className="mt-3 text-sm text-black/70">{a}</p>
+    </details>
   );
 }
